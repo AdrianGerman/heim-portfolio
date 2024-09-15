@@ -1,9 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro'
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
+		<section class="w-full mx-auto lg:w-[740px] py-44">
+			<h1 class="text-white text-5xl font-extrabold flex flex-row gap-x-4 pb-10">
+				Hola!, soy heim 
+				<a href="https://www.linkedin.com/in/heim" 
+					target="_blank" 
+					rel="noopener" 
+					class="flex justify-center items-center">
+					<Badge>En busca de trabajo</Badge>
+				</a> <div class="flex justify-center items-center">
+					</div>
+				</h1>
+			<h2 class="text-xl opacity-80">
+				Desarrollador web fullstack independiente, Licenciado en tecnologías de la información de México 🇲🇽. 
+				Especializado en el desarrollo de aplicaciones web con personalidad.
+			</h2>
+		</section>
 	</main>
 </Layout>
 
