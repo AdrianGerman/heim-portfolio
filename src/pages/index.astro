@@ -1,23 +1,52 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro'
+import Layout from "../layouts/Layout.astro"
+import Badge from "../components/Badge.astro"
+import InstagramIcon from "../icons/Instagram.astro"
+import TwitterIcon from "../icons/Twitter.astro"
+import GitHubIcon from "../icons/GitHub.astro"
+import SocialsPill from "../icons/SocialsPill.astro"
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44">
-			<a href="https://www.linkedin.com/in/heim" target="_blank" rel="noopener" class="flex justify-start items-center gap-6 mb-4">
-				<img class="w-24 rounded-full" src="me.png" alt="logo heim">
-					<Badge>En busca de trabajo</Badge>
-				</a> 
-			<h1 class="text-white text-5xl font-extrabold flex flex-row gap-x-4 pb-10">Hola!, soy heim</h1>
-			<h2 class="text-xl opacity-80">
-				Licenciado en tecnologías de la información de México 🇲🇽.
-				Desarrollador web fullstack especializado en el desarrollo de aplicaciones web con personalidad.
-			</h2>
-		</section>
-	</main>
+  <main>
+    <section class="w-full mx-auto lg:w-[740px] py-44">
+      <a
+        href="https://www.linkedin.com/in/heim"
+        target="_blank"
+        rel="noopener"
+        class="flex justify-start items-center gap-6 mb-4"
+      >
+        <img class="w-24 rounded-full" src="me.png" alt="logo heim" />
+        <Badge>En busca de trabajo</Badge>
+      </a>
+      <h1
+        class="text-white text-5xl font-extrabold flex flex-row gap-x-4 pb-10"
+      >
+        Hola!, soy heim
+      </h1>
+      <h2 class="text-xl text-wrap mb-8">
+        Licenciado en tecnologías de la información de México 🇲🇽. Desarrollador
+        web fullstack especializado en el desarrollo de aplicaciones web con
+        personalidad.
+      </h2>
+
+      <nav class="flex gap-x-4">
+        <!-- campo editable a las necesidades del cliente -->
+        <SocialsPill href="https://github.com/AdrianGerman">
+          <GitHubIcon />
+          GitHub
+        </SocialsPill>
+
+        <SocialsPill href="/">
+          <InstagramIcon />
+          Instagram
+        </SocialsPill>
+
+        <SocialsPill href="/">
+          <TwitterIcon />
+          Twitter (X)
+        </SocialsPill>
+      </nav>
+    </section>
+  </main>
 </Layout>
-
-
-
