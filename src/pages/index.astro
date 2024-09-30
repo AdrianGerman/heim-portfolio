@@ -15,7 +15,7 @@ import Experience from "../icons/Experience.astro"
   title="Porfolio de heim - Desarrollador y Programador con una amplia experiencia"
   description="Contrata a heim para asesorias de diseño web o para crear aplicaciones web desde 0. Desarrollador web y ayuda en todo lo tecnologias. Especializado en crear aplicaciones con personalidad"
 >
-  <main>
+  <main class="px-4">
     <!-- about me or presentation -->
     <SectionContainer class="py-44 pb-24">
       <a
@@ -28,35 +28,35 @@ import Experience from "../icons/Experience.astro"
         <Badge>En busca de trabajo</Badge>
       </a>
       <h1
-        class="text-white text-5xl font-extrabold flex flex-row gap-x-4 pb-10 font-Onest-Variable"
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold flex flex-row gap-x-4 pb-6 lg:pb-10 font-Onest"
       >
         Hola!, soy heim
       </h1>
-      <h2 class="text-xl text-wrap mb-8">
+      <h2 class="text-lg lg:text-xl text-wrap max-w-[700px]">
         Licenciado en tecnologías de la información de México 🇲🇽. Desarrollador
         web fullstack especializado en el desarrollo de aplicaciones web con
         personalidad.
       </h2>
 
-      <nav class="flex gap-x-4">
+      <nav class="flex flex-wrap gap-4 mt-6 lg:mt-8">
         <!-- campo editable a las necesidades del cliente -->
         <SocialsPill href="https://github.com/AdrianGerman">
-          <GitHubIcon class="size-6" />
+          <GitHubIcon class="size-4 :size-6" />
           GitHub
         </SocialsPill>
 
         <SocialsPill href="/">
-          <InstagramIcon class="size-6" />
+          <InstagramIcon class="size-4 :size-6" />
           Instagram
         </SocialsPill>
 
         <SocialsPill href="/">
-          <TwitterIcon class="size-6" />
+          <TwitterIcon class="size-4 :size-6" />
           Twitter (X)
         </SocialsPill>
 
         <SocialsPill href="/">
-          <MailIcon class="size-6" />
+          <MailIcon class="size-4 :size-6" />
           Contáctame
         </SocialsPill>
       </nav>
@@ -65,9 +65,9 @@ import Experience from "../icons/Experience.astro"
     <!-- timeline experience -->
     <SectionContainer id="experiencia">
       <h2
-        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center justify-start font-Onest-Variable"
+        class="text-2xl lg:text-3xl font-semibold mb-6 flex gap-x-3 items-center justify-start font-Onest"
       >
-        <Experience class="size-9" />
+        <Experience class="size-7 lg:size-9" />
         Experiencia laboral
       </h2>
       <Timeline />
