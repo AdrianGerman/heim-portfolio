@@ -1,0 +1,67 @@
+---
+import ReactTag from "../icons/tags/ReactTag.astro"
+import HtmlTag from "../icons/tags/HtmlTag.astro"
+import CssTag from "../icons/tags/CssTag.astro"
+import JavaScriptTag from "../icons/tags/JavaScriptTag.astro"
+
+const TAGS = {
+  REACT: {
+    name: "React",
+    class: "bg-sky-600",
+    icon: ReactTag
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-orange-600",
+    icon: HtmlTag
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-blue-500",
+    icon: CssTag
+  },
+  JS: {
+    name: "JavaScript",
+    class: "bg-yellow-400",
+    icon: JavaScriptTag
+  }
+}
+
+const PROJECTS = [
+  {
+    title: "Born - ElMariana Shop",
+    description:
+      "Tienda donde se muestra la 'merch' del streamer y creador de contenido mexicano llamado Osvaldo Palacios Flores, más conocido como 'ElMariana'. Este es un clon de la web oficial, por lo cual no se completaron los módulos de compra, para evitar problemas con las licencias originales del sitio.",
+    image: "/projects/mariana-shop.webp",
+    link: "#",
+    github: "https://github.com/AdrianGerman/elmariana-shop.git",
+    tags: [TAGS.REACT, TAGS.HTML, TAGS.CSS]
+  }
+]
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article>
+      <img
+        class="rounded-md shadow-2xl shadow-black/15"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${title}`}
+      />
+      <h3 class="text-2xl font-Onest font-semibold my-6">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex items-center gap-x-2 rounded-full text-xs py-1 px-2 ${tag.class}`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </article>
+  ))
+}
