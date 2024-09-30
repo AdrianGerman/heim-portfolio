@@ -8,7 +8,8 @@ export default {
         "Onest-Variable": ["Onest Variable", "sans-serif"]
       },
       colors: {
-        primary: "#76428a"
+        primary: "#76428a",
+        secondary: "#828df3"
       }
     }
   },
