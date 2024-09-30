@@ -1,0 +1,32 @@
+---
+import TimelineItem from "./TimelineItem.astro"
+
+const EXPERIENCE = [
+  {
+    date: "Lorem",
+    title: "lorem lorem lorem lorem",
+    description: "super lorem del lorem con lorem pra lorem",
+    link: "#"
+  },
+  {
+    date: "Lorem",
+    title: "lorem lorem lorem lorem",
+    description: "super lorem del lorem con lorem pra lorem"
+  },
+  {
+    date: "Lorem",
+    title: "lorem lorem lorem lorem",
+    description: "super lorem del lorem con lorem pra lorem"
+  }
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <TimelineItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
