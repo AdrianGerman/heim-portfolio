@@ -5,9 +5,13 @@ import InstagramIcon from "../icons/Instagram.astro"
 import TwitterIcon from "../icons/Twitter.astro"
 import GitHubIcon from "../icons/GitHub.astro"
 import SocialsPill from "../icons/SocialsPill.astro"
+import MailIcon from "../icons/Mail.astro"
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+  title="Porfolio de heim - Desarrollador y Programador con una amplia experiencia"
+  description="Contrata a heim para asesorias de diseño web o para crear aplicaciones web desde 0. Desarrollador web y ayuda en todo lo tecnologias. Especializado en crear aplicaciones con personalidad"
+>
   <main>
     <section class="w-full mx-auto lg:w-[740px] py-44">
       <a
@@ -33,18 +37,23 @@ import SocialsPill from "../icons/SocialsPill.astro"
       <nav class="flex gap-x-4">
         <!-- campo editable a las necesidades del cliente -->
         <SocialsPill href="https://github.com/AdrianGerman">
-          <GitHubIcon />
+          <GitHubIcon class="size-6" />
           GitHub
         </SocialsPill>
 
         <SocialsPill href="/">
-          <InstagramIcon />
+          <InstagramIcon class="size-6" />
           Instagram
         </SocialsPill>
 
         <SocialsPill href="/">
-          <TwitterIcon />
+          <TwitterIcon class="size-6" />
           Twitter (X)
+        </SocialsPill>
+
+        <SocialsPill href="/">
+          <MailIcon class="size-6" />
+          Contáctame
         </SocialsPill>
       </nav>
     </section>
