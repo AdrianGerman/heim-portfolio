@@ -4,6 +4,9 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        "Onest-Variable": ["Onest Variable", "sans-serif"]
+      },
       colors: {
         primary: "#76428a"
       }

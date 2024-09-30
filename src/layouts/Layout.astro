@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro"
+import "@fontsource/onest"
 
 interface Props {
   title: string
@@ -40,6 +41,7 @@ const { description, title } = Astro.props
       }
       html {
         font-family: "JetBrains Mono", system-ui;
+        scroll-behavior: smooth;
       }
 
       body {
@@ -47,6 +49,12 @@ const { description, title } = Astro.props
         display: flex;
         flex-direction: column;
         min-height: 100dvh;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
       }
     </style>
   </body>
