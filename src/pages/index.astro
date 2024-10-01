@@ -14,6 +14,7 @@ import Timeline from "../components/Timeline.astro"
 import SectionContainer from "../components/SectionContainer.astro"
 import Projects from "../components/Projects.astro"
 import Hero from "../components/Hero.astro"
+import TitleSection from "../components/TitleSection.astro"
 ---
 
 <Layout
@@ -28,26 +29,24 @@ import Hero from "../components/Hero.astro"
       </Hero>
     </SectionContainer>
 
-    <!-- timeline experience -->
-    <SectionContainer id="experiencia">
-      <h2
-        class="text-3xl lg:text-4xl font-semibold mb-6 flex gap-x-3 items-center justify-start font-Onest text-black/80 dark:text-white/80"
-      >
-        <Experience class="size-7 lg:size-9" />
-        Experiencia laboral
-      </h2>
-      <Timeline />
-    </SectionContainer>
+    <div class="space-y-24">
+      <!-- timeline experience -->
+      <SectionContainer id="experiencia">
+        <TitleSection>
+          <Experience class="size-7 lg:size-9" />
+          Experiencia laboral
+        </TitleSection>
+        <Timeline />
+      </SectionContainer>
 
-    <!-- my projects -->
-    <SectionContainer id="proyectos">
-      <h2
-        class="text-3xl lg:text-4xl font-semibold mb-6 flex gap-x-3 items-center justify-start font-Onest text-black/80 dark:text-white/80"
-      >
-        <ProjectsIcon class="size-7 lg:size-9" />
-        Proyectos
-      </h2>
-      <Projects />
-    </SectionContainer>
+      <!-- my projects -->
+      <SectionContainer id="proyectos">
+        <TitleSection>
+          <ProjectsIcon class="size-7 lg:size-9" />
+          Proyectos
+        </TitleSection>
+        <Projects />
+      </SectionContainer>
+    </div>
   </main>
 </Layout>
