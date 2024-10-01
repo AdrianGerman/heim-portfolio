@@ -19,14 +19,16 @@ const { title, description, link, date } = Astro.props
       {title}
     </h3>
     <time
-      class="mb-1 text-md font-normal leading-none text-gray-400 dark:text-gray-500 font-Onest"
+      class="mb-1 text-md font-normal leading-none text-gray-500 dark:text-gray-500 font-Onest"
       >{date}</time
     >
   </section>
 
   <section class="flex flex-col gap-y-4">
     <div>
-      <p class="mb-4 text-base font-normal text-gray-100 text-balance">
+      <p
+        class="mb-4 text-base font-normal dark:text-gray-100 text-gray-800 text-pretty"
+      >
         {description}
       </p>
     </div>
@@ -35,7 +37,7 @@ const { title, description, link, date } = Astro.props
         link && (
           <a
             href={link}
-            class="bg-white/5 border border-white/10 rounded-full inline-flex justify-center items-center gap-x-2 py-1.5 px-2.5 md:py-2 md:px-4 text-xs md:text-base transition hover:scale-110 hover:bg-white/10"
+            class="bg-white/5 border dark:border-white/10 border-gray-300 rounded-full inline-flex justify-center items-center gap-x-2 py-1.5 px-2.5 md:py-2 md:px-4 text-xs md:text-base transition hover:scale-110 hover:bg-white/10 text-black/70 dark:text-white/80"
           >
             Saber más...{" "}
             <svg

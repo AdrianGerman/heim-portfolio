@@ -33,11 +33,13 @@ import Projects from "../components/Projects.astro"
         <Badge>En busca de trabajo</Badge>
       </a>
       <h1
-        class="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold flex flex-row gap-x-4 pb-6 lg:pb-10 font-Onest"
+        class="dark:text-white text-gray-800 text-3xl md:text-4xl lg:text-5xl font-extrabold flex flex-row gap-x-4 pb-6 lg:pb-10 font-Onest"
       >
         Hola!, soy heim
       </h1>
-      <h2 class="text-lg lg:text-xl text-balance max-w-[700px]">
+      <h2
+        class="text-lg lg:text-xl text-pretty max-w-[700px] dark:text-white text-gray-800"
+      >
         Licenciado en tecnologías de la información de México 🇲🇽. Desarrollador
         web fullstack especializado en el desarrollo de aplicaciones web con
         personalidad.
@@ -70,7 +72,7 @@ import Projects from "../components/Projects.astro"
     <!-- timeline experience -->
     <SectionContainer id="experiencia">
       <h2
-        class="text-3xl lg:text-4xl font-semibold mb-6 flex gap-x-3 items-center justify-start font-Onest"
+        class="text-3xl lg:text-4xl font-semibold mb-6 flex gap-x-3 items-center justify-start font-Onest text-black/80 dark:text-white/80"
       >
         <Experience class="size-7 lg:size-9" />
         Experiencia laboral
@@ -79,9 +81,9 @@ import Projects from "../components/Projects.astro"
     </SectionContainer>
 
     <!-- my projects -->
-    <SectionContainer id="experiencia">
+    <SectionContainer id="proyectos">
       <h2
-        class="text-3xl lg:text-4xl font-semibold mb-6 flex gap-x-3 items-center justify-start font-Onest"
+        class="text-3xl lg:text-4xl font-semibold mb-6 flex gap-x-3 items-center justify-start font-Onest text-black/80 dark:text-white/80"
       >
         <ProjectsIcon class="size-7 lg:size-9" />
         Proyectos
