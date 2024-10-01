@@ -3,6 +3,10 @@ import ReactTag from "../icons/tags/ReactTag.astro"
 import HtmlTag from "../icons/tags/HtmlTag.astro"
 import CssTag from "../icons/tags/CssTag.astro"
 import JavaScriptTag from "../icons/tags/JavaScriptTag.astro"
+import GitHub from "../icons/GitHub.astro"
+import Link from "../icons/GitHub.astro"
+
+import LinkButton from "../components/LinkButton.astro"
 
 const TAGS = {
   REACT: {
@@ -22,7 +26,7 @@ const TAGS = {
   },
   JS: {
     name: "JavaScript",
-    class: "bg-yellow-400",
+    class: "bg-yellow-500",
     icon: JavaScriptTag
   }
 }
@@ -38,53 +42,79 @@ const PROJECTS = [
     tags: [TAGS.REACT, TAGS.HTML, TAGS.CSS]
   },
   {
-    title: "Born - ElMariana Shop",
+    title: "HTemplates - Componentes de código para tus proyectos web",
     description:
-      "Tienda donde se muestra la 'merch' del streamer y creador de contenido mexicano llamado Osvaldo Palacios Flores, más conocido como 'ElMariana'. Este es un clon de la web oficial, por lo cual no se completaron los módulos de compra, para evitar problemas con las licencias originales del sitio.",
-    image: "/projects/mariana-shop.webp",
+      "Este repositorio contiene una variedad de estilos y componentes para tus proyectos web, como tarjetas (cards), estilos de botones, banderas, y más.",
+    image: "/projects/heim-templates.webp",
     link: "#",
-    github: "https://github.com/AdrianGerman/elmariana-shop.git",
+    github: "https://github.com/AdrianGerman/templates-heim.git",
     tags: [TAGS.REACT, TAGS.HTML, TAGS.CSS]
   },
   {
-    title: "Born - ElMariana Shop",
+    title: "ChatGPT Local - Modelo LLLM que corre de manera local en tu equipo",
     description:
-      "Tienda donde se muestra la 'merch' del streamer y creador de contenido mexicano llamado Osvaldo Palacios Flores, más conocido como 'ElMariana'. Este es un clon de la web oficial, por lo cual no se completaron los módulos de compra, para evitar problemas con las licencias originales del sitio.",
-    image: "/projects/mariana-shop.webp",
+      "Este modelo LLM está diseñado para funcionar localmente en tu equipo. Desarrollado únicamente con JavaScript, este proyecto es compatible con cualquier dispositivo y navegador que tenga habilitada la función WebGPU.",
+    image: "/projects/chat-local.webp",
     link: "#",
-    github: "https://github.com/AdrianGerman/elmariana-shop.git",
-    tags: [TAGS.REACT, TAGS.HTML, TAGS.CSS]
+    github: "https://github.com/AdrianGerman/chatgpt-local",
+    tags: [TAGS.JS, TAGS.HTML, TAGS.CSS]
   }
 ]
 ---
 
-{
-  PROJECTS.map(({ title, description, tags, image }) => (
-    <article class="pb-12">
-      <img
-        loading="lazy"
-        class="rounded-md shadow-2xl shadow-black/15 aspect-video"
-        src={image}
-        alt={`Captura de pantalla del proyecto ${title}`}
-      />
-      <h3 class="text-2xl font-Onest font-semibold my-6 dark:text-white text-gray-800">
-        {title}
-      </h3>
-      <p class="text-lg mb-4 text-pretty dark:text-gray-300 text-gray-600">
-        {description}
-      </p>
-      <ul class="flex gap-x-2 flex-row mb-2">
-        {tags.map((tag) => (
-          <li>
-            <span
-              class={`flex items-center gap-x-2 rounded-full text-md py-1 px-2 border border-white/10 ${tag.class}`}
-            >
-              <tag.icon class="size-4" />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </article>
-  ))
-}
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>
