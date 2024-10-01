@@ -36,15 +36,34 @@ const PROJECTS = [
     link: "#",
     github: "https://github.com/AdrianGerman/elmariana-shop.git",
     tags: [TAGS.REACT, TAGS.HTML, TAGS.CSS]
+  },
+  {
+    title: "Born - ElMariana Shop",
+    description:
+      "Tienda donde se muestra la 'merch' del streamer y creador de contenido mexicano llamado Osvaldo Palacios Flores, más conocido como 'ElMariana'. Este es un clon de la web oficial, por lo cual no se completaron los módulos de compra, para evitar problemas con las licencias originales del sitio.",
+    image: "/projects/mariana-shop.webp",
+    link: "#",
+    github: "https://github.com/AdrianGerman/elmariana-shop.git",
+    tags: [TAGS.REACT, TAGS.HTML, TAGS.CSS]
+  },
+  {
+    title: "Born - ElMariana Shop",
+    description:
+      "Tienda donde se muestra la 'merch' del streamer y creador de contenido mexicano llamado Osvaldo Palacios Flores, más conocido como 'ElMariana'. Este es un clon de la web oficial, por lo cual no se completaron los módulos de compra, para evitar problemas con las licencias originales del sitio.",
+    image: "/projects/mariana-shop.webp",
+    link: "#",
+    github: "https://github.com/AdrianGerman/elmariana-shop.git",
+    tags: [TAGS.REACT, TAGS.HTML, TAGS.CSS]
   }
 ]
 ---
 
 {
   PROJECTS.map(({ title, description, tags, image }) => (
-    <article>
+    <article class="pb-12">
       <img
-        class="rounded-md shadow-2xl shadow-black/15"
+        loading="lazy"
+        class="rounded-md shadow-2xl shadow-black/15 aspect-video"
         src={image}
         alt={`Captura de pantalla del proyecto ${title}`}
       />
