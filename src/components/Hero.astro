@@ -1,0 +1,55 @@
+---
+import SocialsPill from "../icons/SocialsPill.astro"
+import Badge from "./Badge.astro"
+
+// icons
+import GitHubIcon from "../icons/GitHub.astro"
+import InstagramIcon from "../icons/Instagram.astro"
+import TwitterIcon from "../icons/Twitter.astro"
+import MailIcon from "../icons/Mail.astro"
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img class="rounded-full shadow-lg size-16" src="/me.png" alt="Heim" />
+    <a
+      href="https://www.linkedin.com/in/heim"
+      target="_blank"
+      rel="noopener"
+      class="flex justify-start items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white font-Onest"
+  >
+    Hola!, soy heim
+  </h1>
+  <p class="mt-6 text-xl text-gray-800 dark:text-gray-300">
+    Licenciado en tecnologías de la información de México 🇲🇽. Desarrollador web
+    fullstack especializado en el desarrollo de aplicaciones web con
+    personalidad.
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialsPill href="https://github.com/AdrianGerman">
+      <GitHubIcon class="size-4" />
+      GitHub
+    </SocialsPill>
+
+    <SocialsPill href="/">
+      <InstagramIcon class="size-4" />
+      Instagram
+    </SocialsPill>
+
+    <SocialsPill href="/">
+      <TwitterIcon class="size-4" />
+      Twitter (X)
+    </SocialsPill>
+
+    <SocialsPill href="/">
+      <MailIcon class="size-4" />
+      Contáctame
+    </SocialsPill>
+  </nav>
+</div>

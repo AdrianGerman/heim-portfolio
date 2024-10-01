@@ -9,29 +9,29 @@ export interface Props {
 const { title, description, link, date } = Astro.props
 ---
 
-<div class="flex gap-8 pb-12">
-  <section>
-    <div
-      class="absolute w-3 h-3 bg-primary rounded-full mt-1.5 -start-1.5 border border-primary dark:border-gray-900 dark:bg-gray-700"
-    >
-    </div>
-    <h3 class="text-xl font-bold text-secondary font-Onest mb-2">
-      {title}
-    </h3>
-    <time
-      class="mb-1 text-md font-normal leading-none text-gray-500 dark:text-gray-500 font-Onest"
-      >{date}</time
-    >
-  </section>
-
-  <section class="flex flex-col gap-y-4">
-    <div>
-      <p
-        class="mb-4 text-base font-normal dark:text-gray-100 text-gray-800 text-pretty"
+<div
+  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+>
+  <div class="relative pb-12 md:col-span-2">
+    <div class="sticky top-0">
+      <span class="text-primary -left-[42px] absolute rounded-full text-5xl"
+        >&bull;</span
       >
-        {description}
-      </p>
+
+      <h3 class="text-xl text-secondary font-Onest font-bold">
+        {title}
+      </h3>
+      <time
+        class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80 font-Onest"
+        >{date}</time
+      >
     </div>
+  </div>
+
+  <section
+    class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
+  >
+    {description}
     <div>
       {
         link && (

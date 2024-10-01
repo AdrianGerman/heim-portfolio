@@ -10,10 +10,10 @@ import SocialsPill from "../icons/SocialsPill.astro"
 import MailIcon from "../icons/Mail.astro"
 
 // components
-import Badge from "../components/Badge.astro"
 import Timeline from "../components/Timeline.astro"
 import SectionContainer from "../components/SectionContainer.astro"
 import Projects from "../components/Projects.astro"
+import Hero from "../components/Hero.astro"
 ---
 
 <Layout
@@ -22,51 +22,10 @@ import Projects from "../components/Projects.astro"
 >
   <main class="px-4">
     <!-- about me or presentation -->
-    <SectionContainer class="py-44 pb-32">
-      <a
-        href="https://www.linkedin.com/in/heim"
-        target="_blank"
-        rel="noopener"
-        class="flex justify-start items-center gap-6 mb-4"
-      >
-        <img class="w-24 rounded-full" src="me.png" alt="logo heim" />
-        <Badge>En busca de trabajo</Badge>
-      </a>
-      <h1
-        class="dark:text-white text-gray-800 text-3xl md:text-4xl lg:text-5xl font-extrabold flex flex-row gap-x-4 pb-6 lg:pb-10 font-Onest"
-      >
-        Hola!, soy heim
-      </h1>
-      <h2
-        class="text-lg lg:text-xl text-pretty max-w-[700px] dark:text-white text-gray-800"
-      >
-        Licenciado en tecnologías de la información de México 🇲🇽. Desarrollador
-        web fullstack especializado en el desarrollo de aplicaciones web con
-        personalidad.
-      </h2>
-
-      <nav class="flex flex-wrap gap-4 mt-6 lg:mt-8">
-        <!-- campo editable a las necesidades del cliente -->
-        <SocialsPill href="https://github.com/AdrianGerman">
-          <GitHubIcon class="size-4 :size-6" />
-          GitHub
-        </SocialsPill>
-
-        <SocialsPill href="/">
-          <InstagramIcon class="size-4 :size-6" />
-          Instagram
-        </SocialsPill>
-
-        <SocialsPill href="/">
-          <TwitterIcon class="size-4 :size-6" />
-          Twitter (X)
-        </SocialsPill>
-
-        <SocialsPill href="/">
-          <MailIcon class="size-4 :size-6" />
-          Contáctame
-        </SocialsPill>
-      </nav>
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+        <slot />
+      </Hero>
     </SectionContainer>
 
     <!-- timeline experience -->
