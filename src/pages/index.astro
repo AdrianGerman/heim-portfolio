@@ -1,13 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro"
+
 // icons
-import InstagramIcon from "../icons/Instagram.astro"
-import TwitterIcon from "../icons/Twitter.astro"
-import GitHubIcon from "../icons/GitHub.astro"
 import Experience from "../icons/Experience.astro"
 import ProjectsIcon from "../icons/Projects.astro"
-import SocialsPill from "../icons/SocialsPill.astro"
-import MailIcon from "../icons/Mail.astro"
 
 // components
 import Timeline from "../components/Timeline.astro"
@@ -15,6 +11,8 @@ import SectionContainer from "../components/SectionContainer.astro"
 import Projects from "../components/Projects.astro"
 import Hero from "../components/Hero.astro"
 import TitleSection from "../components/TitleSection.astro"
+import AboutMe from "../components/AboutMe.astro"
+import Profile from "../icons/Profile.astro"
 ---
 
 <Layout
@@ -46,6 +44,15 @@ import TitleSection from "../components/TitleSection.astro"
           Proyectos
         </TitleSection>
         <Projects />
+      </SectionContainer>
+
+      <!-- about me -->
+      <SectionContainer id="sobre-mi">
+        <TitleSection>
+          <Profile class="size-7 lg:size-9" />
+          Sobre mí
+        </TitleSection>
+        <AboutMe />
       </SectionContainer>
     </div>
   </main>
