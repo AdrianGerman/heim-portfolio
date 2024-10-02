@@ -6,7 +6,7 @@ const EXPERIENCE = [
     date: "Actualmente...",
     title: "Desarrollador Freelancer",
     description:
-      "Desarrollo de aplicaciones y sitios web personalizados, adaptándonos a los requisitos específicos de cada cliente. Seguimos estrictamente las pautas de diseño establecidas, teniendo en cuenta tanto las preferencias del cliente como las mejores prácticas para mejorar la experiencia de usuario.",
+      "Desarrollo de aplicaciones y sitios web personalizados, adaptándonos a los requisitos específicos de cada cliente. Teniendo en cuenta tanto las preferencias del cliente como las mejores prácticas para mejorar la experiencia de usuario.",
     link: "#"
   },
   {
@@ -18,10 +18,10 @@ const EXPERIENCE = [
 ]
 ---
 
-<ol class="relative mt-10">
+<ol class="relative mt-16">
   {
     EXPERIENCE.map((experience) => (
-      <li class="">
+      <li>
         <TimelineItem {...experience} />
       </li>
     ))
